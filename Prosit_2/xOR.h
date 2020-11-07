@@ -12,6 +12,7 @@ public:
 	void crypter();
 	int convertir_ASCII(char c);
 	std::string convertir_bin(int n);
+	int bin2entier(std::string bin);
 
 private:
 	std::string m_message;

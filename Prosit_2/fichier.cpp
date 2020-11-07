@@ -19,6 +19,7 @@ void Fichier::lire(string const chemin) {
 
         string ligne; //Une variable pour stocker les lignes lues
         string result="";
+        cout << "contenu du fichier :" << endl;
         while (getline(fichier, ligne)) //Tant qu'on n'est pas à la fin, on lit
         {
             cout << ligne << endl;

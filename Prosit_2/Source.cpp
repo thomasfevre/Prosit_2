@@ -24,5 +24,6 @@ int main(){
 
 	test1.lire("mot.txt");
 	test1.crypter();
+	test1.decrypter();
 	return 0;
 }
