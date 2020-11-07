@@ -12,7 +12,7 @@ Cesar::Cesar() {
 	cout << "tableaux construits !" << endl;
 }
 
-string Cesar::decrypter() {
+void Cesar::decrypter() {
 	const int g = m_contenu.size();
 	const int e = tab.size();
 	string traduction;
@@ -28,23 +28,24 @@ string Cesar::decrypter() {
 		}
 	}
 	cout <<endl << "trad :"<<endl << traduction << endl;
-	return traduction;
+	contenu_decrypté = traduction;
 }
 
-void Cesar::crypter(std::string texte) {
-	const int g = texte.size();
+void Cesar::crypter() {
+	const int g = contenu_decrypté.size();
 	const int e = tab.size();
 	string traduction;
 
 	for (int i = 0; i <= g; i++) {
 		for (int j = 0; j < e; j++) {
-			if (texte[i] == tab[j]) {
+			if (contenu_decrypté[i] == tab[j]) {
 				traduction += tab_c[j];
 			}
-			else if (texte[i] == tab_c[j] && j == 26) {
+			else if (contenu_decrypté[i] == tab_c[j] && j == 26) {
 				traduction += ' ';
 			}
 		}
 	}
+	contenu_crypté = traduction;
 	cout << endl << "crypt :" << endl << traduction << endl;
 }

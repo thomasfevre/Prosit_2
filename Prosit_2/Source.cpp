@@ -17,7 +17,7 @@ int main(){
 	
 	test.lire("Texte.txt");
 	test.ecrire("texte rajoute");
-	chiffre = test.decrypter();
-	test.crypter(chiffre);
+	test.decrypter();
+	test.crypter();
 	return 0;
 }
