@@ -12,13 +12,12 @@ void binaire(int chiffre) {
 
 int main(){
 	
-	Fichier fichier;
 	Cesar test;
 	string dechiffre, chiffre;
 	
-	dechiffre = fichier.lire("Texte.txt");
-	fichier.ecrire("yoyoyooyoyooyyoyo");
-	chiffre = test.decrypter(dechiffre);
+	test.lire("Texte.txt");
+	test.ecrire("texte rajoute");
+	chiffre = test.decrypter();
 	test.crypter(chiffre);
 	return 0;
 }

@@ -9,7 +9,7 @@ Fichier::Fichier() {
 	m_path = "";
 }
 
-string Fichier::lire(string const chemin) {
+void Fichier::lire(string const chemin) {
 	m_path = chemin;
     ifstream fichier(m_path.c_str());
 
@@ -25,12 +25,12 @@ string Fichier::lire(string const chemin) {
             //Et on l'affiche dans la console
             result += ligne;
         }
-        return result;
+        m_contenu = result;
     }
     else
     {
         cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
-        return "NA";
+        m_contenu = "NA";
     }
     fichier.close();
 }

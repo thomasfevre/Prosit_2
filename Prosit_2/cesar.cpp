@@ -12,17 +12,17 @@ Cesar::Cesar() {
 	cout << "tableaux construits !" << endl;
 }
 
-string Cesar::decrypter(string texte) {
-	const int g = texte.size();
+string Cesar::decrypter() {
+	const int g = m_contenu.size();
 	const int e = tab.size();
 	string traduction;
 	
 	for (int i = 0; i <= g; i++) {
 		for (int j = 0; j < e; j++) {
-			if (texte[i] == tab_c[j] ) {
+			if (m_contenu[i] == tab_c[j] ) {
 				traduction += tab[j];
 			}
-			else if (texte[i] == tab[j] && j==26) {
+			else if (m_contenu[i] == tab[j] && j==26) {
 				traduction += ' ';
 			}
 		}

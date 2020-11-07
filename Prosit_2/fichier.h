@@ -9,11 +9,12 @@ class Fichier
 {
 public :
 	Fichier();
-	std::string lire(std::string chemin);
+	void lire(std::string chemin);
 	void ecrire(std::string texte);
 
-private :
+protected :
 	std::string m_path;
+	std::string m_contenu;
 };
 
 
