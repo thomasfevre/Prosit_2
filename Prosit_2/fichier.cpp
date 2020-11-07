@@ -36,13 +36,14 @@ string Fichier::lire(string const chemin) {
 }
 
 void Fichier::ecrire(string texte) {
-    ofstream monFlux;
-	monFlux.open(m_path.c_str());
+    
+	ofstream monFlux(m_path.c_str(), ofstream::out | ofstream::app);
 	if (monFlux) {
-		monFlux << texte << endl << endl;
+        
+		monFlux << endl << texte << endl;
 	}
 	else { 
-		cout << "ERREUR: impossible d'oecrire dans le fichier" << endl; 
+		cout << "ERREUR: impossible d'ecrire dans le fichier" << endl; 
 	}
     monFlux.close();
 }
