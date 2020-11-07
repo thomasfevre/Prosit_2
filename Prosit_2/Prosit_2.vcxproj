@@ -141,12 +141,15 @@
     <ClCompile Include="cesar.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="fichier.cpp" />
+    <ClCompile Include="xOR.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cesar.h" />
     <ClInclude Include="fichier.h" />
+    <ClInclude Include="xOR.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="mot.txt" />
     <Text Include="Texte.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

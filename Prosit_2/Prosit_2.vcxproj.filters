@@ -24,6 +24,9 @@
     <ClCompile Include="cesar.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="xOR.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fichier.h">
@@ -32,9 +35,15 @@
     <ClInclude Include="cesar.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="xOR.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Texte.txt">
+      <Filter>Fichiers sources</Filter>
+    </Text>
+    <Text Include="mot.txt">
       <Filter>Fichiers sources</Filter>
     </Text>
   </ItemGroup>

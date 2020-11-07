@@ -5,8 +5,8 @@
 
 using namespace std;
 
-Fichier::Fichier() {
-	m_path = "";
+Fichier::Fichier() : m_path("")
+{
 }
 
 void Fichier::lire(string const chemin) {
