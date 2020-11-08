@@ -52,7 +52,7 @@ void xOR::crypter(string message) {
 		resultat += tmp ;
 		resultat += "-";
 	}
-	cout << endl <<"contenu crypte :" << endl << resultat << endl;
+	cout << endl <<"contenu crypte :" << resultat << endl;
 	m_contenu_crypté = resultat;
 
 }

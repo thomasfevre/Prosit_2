@@ -11,7 +11,6 @@ Cesar::Cesar() {
 	m_tab_c = "bcdefghijklmnopqrstuvwxyza *";
 	m_cesar_crypté = "";
 	m_cesar_decrypté = "";
-	cout << "tableaux construits !" << endl;
 }
 
 void Cesar::decrypter(string message) {
@@ -21,15 +20,15 @@ void Cesar::decrypter(string message) {
 	
 	for (int i = 0; i <= g; i++) {
 		for (int j = 0; j < e; j++) {
-			if (m_contenu[i] == m_tab_c[j] ) {
+			if (message[i] == m_tab_c[j] ) {
 				traduction += m_tab[j];
 			}
-			else if (m_contenu[i] == m_tab[j] && j==26) {
+			else if (message[i] == m_tab[j] && j==26) {
 				traduction += ' ';
 			}
 		}
 	}
-	cout <<endl << "trad :"<<endl << traduction << endl;
+	cout <<endl << "trad :"<< traduction << endl;
 	m_cesar_decrypté = traduction;
 }
 
@@ -40,14 +39,14 @@ void Cesar::crypter(string message) {
 
 	for (int i = 0; i <= g; i++) {
 		for (int j = 0; j < e; j++) {
-			if (m_cesar_decrypté[i] == m_tab[j]) {
+			if (message[i] == m_tab[j]) {
 				traduction += m_tab_c[j];
 			}
-			else if (m_cesar_decrypté[i] == m_tab_c[j] && j == 26) {
+			else if (message[i] == m_tab_c[j] && j == 26) {
 				traduction += ' ';
 			}
 		}
 	}
 	m_cesar_crypté = traduction;
-	cout << endl << "crypt :" << endl << traduction << endl;
+	cout << endl << "crypt :" << traduction << endl;
 }
