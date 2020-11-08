@@ -9,13 +9,13 @@ using namespace std;
 Cesar::Cesar() {
 	m_tab = "abcdefghijklmnopqrstuvwxyz ";
 	m_tab_c = "bcdefghijklmnopqrstuvwxyza *";
-	m_contenu_crypté = "";
-	m_contenu_decrypté = "";
+	m_cesar_crypté = "";
+	m_cesar_decrypté = "";
 	cout << "tableaux construits !" << endl;
 }
 
-void Cesar::decrypter() {
-	const int g = m_contenu.size();
+void Cesar::decrypter(string message) {
+	const int g = message.size();
 	const int e = m_tab.size();
 	string traduction;
 	
@@ -30,24 +30,24 @@ void Cesar::decrypter() {
 		}
 	}
 	cout <<endl << "trad :"<<endl << traduction << endl;
-	m_contenu_decrypté = traduction;
+	m_cesar_decrypté = traduction;
 }
 
-void Cesar::crypter() {
-	const int g = m_contenu_decrypté.size();
+void Cesar::crypter(string message) {
+	const int g = message.size();
 	const int e = m_tab.size();
 	string traduction;
 
 	for (int i = 0; i <= g; i++) {
 		for (int j = 0; j < e; j++) {
-			if (m_contenu_decrypté[i] == m_tab[j]) {
+			if (m_cesar_decrypté[i] == m_tab[j]) {
 				traduction += m_tab_c[j];
 			}
-			else if (m_contenu_decrypté[i] == m_tab_c[j] && j == 26) {
+			else if (m_cesar_decrypté[i] == m_tab_c[j] && j == 26) {
 				traduction += ' ';
 			}
 		}
 	}
-	m_contenu_crypté = traduction;
+	m_cesar_crypté = traduction;
 	cout << endl << "crypt :" << endl << traduction << endl;
 }

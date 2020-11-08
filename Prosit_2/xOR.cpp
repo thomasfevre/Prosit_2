@@ -11,8 +11,8 @@ xOR::xOR() : m_message(""), m_cle("a definir ds fn"), m_contenu_crypté(""), m_co
 {
 }
 
-void xOR::decrypter() {
-	m_message = m_contenu_crypté ;
+void xOR::decrypter(string message) {
+	m_message = message ;
 	int g = m_message.size();
 	int i = 0;
 	int h = 0;
@@ -38,8 +38,8 @@ void xOR::decrypter() {
 	m_contenu_decrypté = resultat;
 }
 
-void xOR::crypter() {
-	m_message = m_contenu;
+void xOR::crypter(string message) {
+	m_message = message;
 	int g = m_message.size();
 	int h = 0;
 	int A;

@@ -10,7 +10,7 @@ class Fichier
 public :
 	Fichier();
 	void lire(std::string chemin);
-	void ecrire(std::string texte);
+	void ecrire(std::string texte, std::string path);
 
 protected :
 	std::string m_path;

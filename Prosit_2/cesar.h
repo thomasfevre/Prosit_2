@@ -8,14 +8,14 @@
 class Cesar: public Fichier {
 public:
 	Cesar();
-	void decrypter();
-	void crypter();
+	void decrypter(std::string message);
+	void crypter(std::string message);
 
-private:
+protected:
 	std::string m_tab;
 	std::string m_tab_c;
-	std::string m_contenu_decrypté;
-	std::string m_contenu_crypté;
+	std::string m_cesar_decrypté;
+	std::string m_cesar_crypté;
 };
 
 

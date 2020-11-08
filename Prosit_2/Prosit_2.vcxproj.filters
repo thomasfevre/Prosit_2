@@ -27,6 +27,9 @@
     <ClCompile Include="xOR.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="prosit.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fichier.h">
@@ -38,12 +41,15 @@
     <ClInclude Include="xOR.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="prosit.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Texte.txt">
+    <Text Include="decrypté.txt">
       <Filter>Fichiers sources</Filter>
     </Text>
-    <Text Include="mot.txt">
+    <Text Include="crypté.txt">
       <Filter>Fichiers sources</Filter>
     </Text>
   </ItemGroup>

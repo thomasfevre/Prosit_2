@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cesar.cpp" />
+    <ClCompile Include="prosit.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="fichier.cpp" />
     <ClCompile Include="xOR.cpp" />
@@ -146,11 +147,12 @@
   <ItemGroup>
     <ClInclude Include="cesar.h" />
     <ClInclude Include="fichier.h" />
+    <ClInclude Include="prosit.h" />
     <ClInclude Include="xOR.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="mot.txt" />
-    <Text Include="Texte.txt" />
+    <Text Include="decrypté.txt" />
+    <Text Include="crypté.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

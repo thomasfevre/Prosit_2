@@ -4,6 +4,7 @@
 #include "fichier.h"
 #include "cesar.h"
 #include "xOR.h"
+#include "prosit.h"
 
 using namespace std;
 
@@ -13,17 +14,8 @@ void binaire(int chiffre) {
 
 int main(){
 	
-	/*Cesar test;
-	
-	test.lire("Texte.txt");
-	test.ecrire("texte rajoute");
-	test.decrypter();
-	test.crypter();*/
+	Prosit test;
+	test.Cdecrypter("crypté.txt", "decrypté.txt");
 
-	xOR test1;
-
-	test1.lire("mot.txt");
-	test1.crypter();
-	test1.decrypter();
 	return 0;
 }

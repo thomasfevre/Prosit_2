@@ -36,9 +36,9 @@ void Fichier::lire(string const chemin) {
     fichier.close();
 }
 
-void Fichier::ecrire(string texte) {
+void Fichier::ecrire(string texte,string path) {
     
-	ofstream monFlux(m_path.c_str(), ofstream::out | ofstream::app);
+	ofstream monFlux(path.c_str(), ofstream::out | ofstream::app);
 	if (monFlux) {
         
 		monFlux << endl << texte << endl;

@@ -8,13 +8,13 @@
 class xOR : public Fichier {
 public:
 	xOR();
-	void decrypter();
-	void crypter();
+	void decrypter(std::string message);
+	void crypter(std::string message);
 	int convertir_ASCII(char c);
 	std::string convertir_bin(int n);
 	int bin2entier(std::string bin);
 
-private:
+protected:
 	std::string m_message;
 	std::string m_cle;
 	std::string m_contenu_decrypté;
