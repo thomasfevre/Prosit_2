@@ -16,6 +16,7 @@ int main(){
 	Prosit test;
 	int c_d=0;
 	int secu=0;
+	debut:
 	cout << "voulez-vous crypter[1] le fichier ou le decrypter[2]?" << endl;
 	cin >> c_d;
 	if (c_d == 1) {
@@ -30,6 +31,8 @@ int main(){
 		else if (secu == 3) {
 			test.Pcrypter("decrypté.txt", "crypté.txt");
 		}
+		cout << "mauvaise valeur entree !" << endl;
+		goto debut;
 	}
 	else if (c_d == 2) {
 		cout << "quelle securité ? Cesar=1 xOR=2 les deux=3" << endl;
@@ -43,10 +46,18 @@ int main(){
 		else if (secu == 3) {
 			test.Pdecrypter("crypté.txt", "decrypté.txt");
 		}
+		else {
+			cout << "mauvaise valeur entree !" << endl;
+			goto debut;
+		}
+	}
+	else {
+		cout << "mauvaise valeur entree !" << endl;
+		goto debut;
 	}
 	
-	cout << endl << "OPERATION EFFECTUEE AVEC SUCCES !" << endl;
 	
+	cout << "OPERATION EFFECTUEE AVEC SUCCES !" << endl;
 
 	return 0;
 }
