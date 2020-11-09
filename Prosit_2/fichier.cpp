@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Fichier::Fichier() : m_path("")
+Fichier::Fichier() : m_path(""),m_contenu("")
 {
 }
 
