@@ -41,7 +41,7 @@ void Fichier::ecrire(string texte,string path) {
 	ofstream monFlux(path.c_str(), ofstream::out | ofstream::app);
 	if (monFlux) {
         
-		monFlux << endl << texte << endl;
+		monFlux <<endl<< texte << endl;
 	}
 	else { 
 		cout << "ERREUR: impossible d'ecrire dans le fichier" << endl; 

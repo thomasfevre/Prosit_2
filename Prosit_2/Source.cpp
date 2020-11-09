@@ -20,7 +20,7 @@ int main(){
 	cout << "voulez-vous crypter[1] le fichier ou le decrypter[2]?" << endl;
 	cin >> c_d;
 	if (c_d == 1) {
-		cout << "quelle securité ? Cesar=1 xOR=2 les deux=3" << endl;
+		cout << "quelle securite ? Cesar=1 xOR=2 les deux=3" << endl;
 		cin >> secu;
 		if (secu == 1) {
 			test.Ccrypter("decrypté.txt", "crypté.txt");
@@ -31,11 +31,13 @@ int main(){
 		else if (secu == 3) {
 			test.Pcrypter("decrypté.txt", "crypté.txt");
 		}
-		cout << "mauvaise valeur entree !" << endl;
-		goto debut;
+		else {
+			cout << "mauvaise valeur entree !" << endl;
+			goto debut;
+		}
 	}
 	else if (c_d == 2) {
-		cout << "quelle securité ? Cesar=1 xOR=2 les deux=3" << endl;
+		cout << "quelle securite ? Cesar=1 xOR=2 les deux=3" << endl;
 		cin >> secu;
 		if (secu == 1) {
 			test.Cdecrypter("crypté.txt", "decrypté.txt");
@@ -57,7 +59,7 @@ int main(){
 	}
 	
 	
-	cout << "OPERATION EFFECTUEE AVEC SUCCES !" << endl;
+	cout << endl << "OPERATION EFFECTUEE AVEC SUCCES !" << endl;
 
 	return 0;
 }

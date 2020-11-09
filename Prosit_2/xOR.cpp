@@ -20,6 +20,7 @@ void xOR::decrypter(string message) {
 	string tmp;
 	string resultat;
 	while ( i <g ) {
+		int C = 0;
 		tmp = "";
 		while (m_message[j] != ' ' && m_message[j] != '-') {
 			tmp += m_message[j];
@@ -28,11 +29,14 @@ void xOR::decrypter(string message) {
 		}
 		i++;
 		j++;
-		
+		C++;
 		h = bin2entier(tmp);
 		char r = h^199;
-		int s = h ^ 199;
 		resultat += r;
+		if (C == 10) {												// Retour à la ligne
+			C = 0;
+			resultat += '\n';
+		}
 	}
 	cout << endl << "message decrypte :"<< resultat << endl;
 	m_contenu_decrypté = resultat;
@@ -42,15 +46,21 @@ void xOR::crypter(string message) {
 	m_message = message;
 	int g = m_message.size();
 	int h = 0;
-	int A;
+	int A = 0;
+	int C = 0;
 	string tmp;
 	string resultat;
 	for (int i = 0; i < g; i++) {
+		C++;
 		tmp = "";
 		A = convertir_ASCII(m_message[i]);
 		tmp = convertir_bin(A);
 		resultat += tmp ;
 		resultat += "-";
+		if (C == 10) {												// Retour à la ligne
+			C = 0;
+			resultat += '\n';
+		}
 	}
 	cout << endl <<"contenu crypte :" << resultat << endl;
 	m_contenu_crypté = resultat;
