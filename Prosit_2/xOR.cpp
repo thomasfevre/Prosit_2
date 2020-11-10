@@ -7,13 +7,13 @@
 using namespace std;
 
 // ajouter la cle dans les meyhodes avec le fonctio bin si elle marche
-xOR::xOR() : m_message(""), m_cle("a definir ds fn"), m_contenu_crypté(""), m_contenu_decrypté("")
+xOR::xOR() : m_cle("a definir ds fn"), m_contenu_crypté(""), m_contenu_decrypté("")
 {
 }
 
 void xOR::decrypter(string message) {
-	m_message = message ;
-	int g = m_message.size();
+
+	int g = message.size();
 	int i = 0;
 	int h = 0;
 	int j = 0;
@@ -22,8 +22,8 @@ void xOR::decrypter(string message) {
 	while ( i <g ) {
 		int C = 0;
 		tmp = "";
-		while (m_message[j] != ' ' && m_message[j] != '-') {
-			tmp += m_message[j];
+		while (message[j] != ' ' && message[j] != '-') {
+			tmp += message[j];
 			j++;
 			i++;
 		}
@@ -43,8 +43,8 @@ void xOR::decrypter(string message) {
 }
 
 void xOR::crypter(string message) {
-	m_message = message;
-	int g = m_message.size();
+	
+	int g = message.size();
 	int h = 0;
 	int A = 0;
 	int C = 0;
@@ -53,7 +53,7 @@ void xOR::crypter(string message) {
 	for (int i = 0; i < g; i++) {
 		C++;
 		tmp = "";
-		A = convertir_ASCII(m_message[i]);
+		A = convertir_ASCII(message[i]);
 		tmp = convertir_bin(A);
 		resultat += tmp ;
 		resultat += "-";

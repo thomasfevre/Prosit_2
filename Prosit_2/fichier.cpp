@@ -5,13 +5,13 @@
 
 using namespace std;
 
-Fichier::Fichier() : m_path(""),m_contenu("")
+Fichier::Fichier() : m_contenu("")
 {
 }
 
 void Fichier::lire(string const chemin) {
-	m_path = chemin;
-    ifstream fichier(m_path.c_str());
+	
+    ifstream fichier(chemin.c_str());
 
     if (fichier)
     {

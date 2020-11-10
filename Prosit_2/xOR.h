@@ -15,7 +15,6 @@ public:
 	int bin2entier(std::string bin);
 
 protected:
-	std::string m_message;
 	std::string m_cle;
 	std::string m_contenu_decrypté;
 	std::string m_contenu_crypté;

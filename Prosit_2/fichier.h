@@ -13,7 +13,6 @@ public :
 	void ecrire(std::string texte, std::string path);
 
 protected :
-	std::string m_path;
 	std::string m_contenu;
 };
 
