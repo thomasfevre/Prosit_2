@@ -96,7 +96,7 @@ void xOR::crypter(string message) {
 		C++;
 		tmp = "";
 		A = convertir_ASCII(message[i]);
-		tmp = convertir_bin(A);
+		tmp = convertir_bin(&A);
 		resultat += tmp;
 		resultat += "-";
 		if (C == 10) {												// Retour à la ligne
@@ -124,10 +124,10 @@ int xOR::convertir_ASCII(char c) {
 	return lettreEnAscii ^ (int)m_cle[r];
 }
 
-string xOR::convertir_bin(int n) {
+string xOR::convertir_bin(int *n) {
 	string r;
-	while (n != 0) {
-		r = (n % 2 == 0 ? "0" : "1") + r; n /= 2;
+	while (*n != 0) {
+		r = (*n % 2 == 0 ? "0" : "1") + r; *n /= 2;
 	}
 	return r;
 }

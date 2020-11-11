@@ -11,7 +11,7 @@ public:
 	void decrypter(std::string message);
 	void crypter(std::string message);
 	int convertir_ASCII(char c);
-	std::string convertir_bin(int n);
+	std::string convertir_bin(int *n);
 	int bin2entier(std::string bin);
 
 protected:

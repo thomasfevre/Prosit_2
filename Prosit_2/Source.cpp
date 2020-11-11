@@ -19,9 +19,13 @@ int main(){
 	debut:
 	cout << "voulez-vous crypter[1] le fichier ou le decrypter[2]?" << endl;
 	cin >> c_d;
+	cin.clear();
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	if (c_d == 1) {
 		cout << "quelle securite ? Cesar=1 xOR=2 les deux=3" << endl;
 		cin >> secu;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		if (secu == 1) {
 			test.Ccrypter("decrypté.txt", "crypté.txt");
 		}
@@ -39,6 +43,8 @@ int main(){
 	else if (c_d == 2) {
 		cout << "quelle securite ? Cesar=1 xOR=2 les deux=3" << endl;
 		cin >> secu;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		if (secu == 1) {
 			test.Cdecrypter("crypté.txt", "decrypté.txt");
 		}
