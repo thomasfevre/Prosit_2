@@ -30,7 +30,7 @@ void xOR::decrypter(string message) {
 	for (int i = 0; i < q; i++) {
 		int tmp = 0;
 		tmp = (int)m_cle[i];
-		cout << tmp << endl;
+		
 		m_cle[i] = tmp;
 		m_cle += ' ';
 		i++;
@@ -51,7 +51,7 @@ void xOR::decrypter(string message) {
 		j++;
 		C++;
 		h = bin2entier(tmp);
-		cout << h << "compteur ::  " << m_cle[compteurCle] << endl;
+		
 		char r = h ^ (int)m_cle[compteurCle];
 		resultat += r;
 		compteurCle++;
@@ -84,7 +84,7 @@ void xOR::crypter(string message) {
 	for (int i = 0; i < h; i++) {
 		int tmp = 0;
 		tmp = (int)m_cle[i];
-		cout << tmp;
+		
 		m_cle[i] = tmp;
 		m_cle += ' ';
 		i++;
@@ -116,11 +116,11 @@ int xOR::convertir_ASCII(char c) {
 		CcompteurCle = 0;
 	}
 	int r = CcompteurCle;
-	cout << "r :   " << r << endl;
+	
 	CcompteurCle++;
 	int re = lettreEnAscii ^ (int)m_cle[r];
 
-	cout << endl <<lettreEnAscii << "test c bon ?::  " << re << endl;
+	
 	return lettreEnAscii ^ (int)m_cle[r];
 }
 
